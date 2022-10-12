@@ -2,10 +2,12 @@
   "name": "begin-app",
   "version": "0.0.1",
   "scripts": {
-    "start": "begin dev",
-    "lint": "eslint ./app/**/*.mjs --fix"
+    "begin": "begin dev",
+    "lint": "eslint ./app/**/*.mjs --fix",
+    "start": "arc sandbox"
   },
   "devDependencies": {
+    "@architect/architect": "^10.7.0",
     "@enhance/types": "latest",
     "eslint": "latest"
   },
