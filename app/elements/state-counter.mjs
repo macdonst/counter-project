@@ -1,7 +1,7 @@
 // app/elements/state-counter.mjs
 export default function StateCounter({ html, state }) {
   const { attrs, store } = state
-  let value = store.value ? store.value : attrs.value
+  let value = (store.value ? store.value : attrs.value) || 0
   return html`
   <style>
     * {
@@ -39,7 +39,7 @@ export default function StateCounter({ html, state }) {
             super()
             this.p = this.querySelector('p')
             this.input = this.querySelector('input')
-            this.value = parseInt(this.getAttribute('value'))
+            this.value = parseInt(this.getAttribute('value')) || 0
 
             this.decrementButton = this.querySelector('.decrement')
             this.incrementButton = this.querySelector('.increment')
